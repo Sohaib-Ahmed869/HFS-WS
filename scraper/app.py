@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from scrape import perform_search, perform_full_scrape
+from main import perform_search, perform_full_scrape
 import os
 import json
 import threading

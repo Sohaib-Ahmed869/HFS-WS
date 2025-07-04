@@ -2051,7 +2051,7 @@ def standalone_scrape(postal_code, visible=False, max_restaurants=None, max_menu
         return False
 
 
-def check_api_health(base_url="http://localhost:5000"):
+def check_api_health(base_url="http://localhost:5005"):
     """Check if the Flask API is running"""
     try:
         response = requests.get(f"{base_url}/health", timeout=5)
@@ -3213,5 +3213,5 @@ if __name__ == '__main__':
     print("   • Added: Automatic post-processing cleanup")
     print("   • Added: Intelligent store name deduplication (NEW)")
     print("   • Trust: data-testid selectors as primary indicators")
-    app.run(debug=False, host='0.0.0.0', port=5000, threaded=True)
+    app.run(debug=False, host='0.0.0.0', port=5005, threaded=True)
 
